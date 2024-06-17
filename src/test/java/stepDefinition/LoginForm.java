@@ -19,7 +19,7 @@ public class LoginForm {
     @Given("Ingresar a la pagina {string}")
     public void ingresar_a_la_pagina(String myUrl) {
         // Write code here that turns the phrase above into concrete actions
-        System.setProperty("webdriver.chrome,driver", "src/resources/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/resources/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get(myUrl);
     }
