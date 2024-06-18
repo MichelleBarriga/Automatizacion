@@ -1,23 +1,17 @@
 package utility;
 
-import io.cucumber.java.Before;
 import io.cucumber.java.After;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import io.cucumber.java.Before;
 
 public class Hooks {
 
-    public static BrowserDriver driver;
-
-
     @Before
     public void setUp() {
-        driver = new BrowserDriver();
+        BrowserDriver.getDriver(); // Initialize the driver
     }
 
     @After
     public void tearDown() {
-        // Cerrar el navegador después de cada escenario
-        driver.clear();
+        BrowserDriver.clear(); // Clear the driver
     }
 }
